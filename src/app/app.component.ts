@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { analyzeAndValidateNgModules } from '@angular/compiler';
 
 class Pizza {
   id: number;
@@ -14,12 +13,6 @@ const PIZZAS : Pizza[] = [
   { id: 4, name: 'Cannibale', price: 9 }
 ];
 
-class Pizza {
-  id: number;
-  name: string;
-  price: number;
-}
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -27,13 +20,6 @@ class Pizza {
 })
 export class AppComponent {
   title = 'pizzaparty';
-<<<<<<< Updated upstream
-  pizza: Pizza = {
-    id : 1,
-    name: 'Reine',
-    price: 12
-  };
-=======
   selectedPizza: Pizza;
   pizzas: Pizza[] = PIZZAS;
 onSelect(pizza: Pizza): void{
@@ -41,5 +27,4 @@ onSelect(pizza: Pizza): void{
   console.log(pizza);
   this.selectedPizza = pizza;
  }
->>>>>>> Stashed changes
 }

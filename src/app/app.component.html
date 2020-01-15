@@ -1,16 +1,5 @@
 <h1>{{ title }}</h1>
-<<<<<<< Updated upstream
-<h2>{{ pizza.name }}</h2>
-<div>ID: {{ pizza.id }}</div>
-<div>Price: {{ pizza.price }}</div>
 
-<!-- ngModel est une directive d'Angular -->
-<input [(ngModel)]="pizza.name">
-
-<!-- 
-  <input  [value]="pizza.name" (keyup)="pizza.name = $event.target.value">
--->
-=======
 <div *ngIf="selectedPizza">
   <h2>{{ selectedPizza?.name }}</h2>
   <div>ID: {{ selectedPizza.id }}</div>
@@ -31,4 +20,3 @@
     {{ pizza.name }}
   </li>
 </ul>
->>>>>>> Stashed changes
