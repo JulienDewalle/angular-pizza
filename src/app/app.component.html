@@ -1,13 +1,13 @@
-<h1>{{ title }}</h1>
+<h1 class="text-center mb-5">{{ title }}</h1>
 <app-pizza [pizza]="selectedPizza"></app-pizza>
 
 <!-- 
   <input  [value]="selectedPizza.name" (keyup)="pizza.name = $event.target.value">
 -->
 
-<h2>Les pizzas</h2>
+<h2 class="text-center mb-5 mt-5">Les pizzas</h2>
 
-<ul>
+<ul class="text-center">
   <li *ngFor="let pizza of pizzas"(click)="onSelect(pizza)">
     {{ pizza.name }}
   </li>
