@@ -8,9 +8,9 @@
     
         <tr *ngFor="let ingredient of ingredients">
             <td>{{ ingredient.nom }}</td>
-            <td><img  width ="100" src="'/assets/ingredients/' + ingredient.image" alt="ingredient.image"><br></td>
+            <td><img  width ="100" src="'img/' + ingredient.image" alt="{{ ingredient.nom }}"><br></td>
             <td>{{ ingredient.poids }}</td>
-            <td>{{ ingredient.prix }}</td>
+            <td>{{ ingredient.prix }}€</td>
         </tr>
 </table>
 
