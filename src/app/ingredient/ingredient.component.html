@@ -6,11 +6,11 @@
         <th>Prix</th>
     </tr>
     
-        <tr *ngFor="let ingredient of ingredients">
+        <tr *ngFor="let ingredient of ingredients" (click)="chooseIngredient(ingredient)">
             <td>{{ ingredient.nom }}</td>
-            <td><img  width ="100" src="'img/' + ingredient.image" alt="{{ ingredient.nom }}"><br></td>
-            <td>{{ ingredient.poids }}</td>
-            <td>{{ ingredient.prix }}€</td>
+            <td><img  width ="100" [src]="'/assets/img/' + ingredient.image" alt="{{ ingredient.nom }}"><br></td>
+            <td>{{ ingredient.poids }} gr</td>
+            <td>{{ ingredient.prix }} €</td>
         </tr>
 </table>
 

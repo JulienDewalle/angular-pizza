@@ -26,9 +26,10 @@ export class AppComponent {
     age: null
   };
   ingredients: Ingredient[] = [
-    { nom: 'Chévre', image: '/ingredient/img/chevre.jpg', poids: 20, prix: 2 },
-    { nom: 'Mozza', image: 'img/mozza.jpg', poids: 50, prix: 4 }
+    { nom: 'Chévre', image: 'chevre.jpg', poids: 20, prix: 2 },
+    { nom: 'Mozza', image: 'mozza.jpg', poids: 50, prix: 4 }
 ];
+selectedIngredient: Ingredient;
 
 
 
@@ -50,4 +51,9 @@ export class AppComponent {
     console.log(pizza);
     this.selectedPizza = pizza;
   }
+  selectIngredient(event){
+    console.log(event);
+    this.selectedIngredient = event;
+  }
+  
 }
