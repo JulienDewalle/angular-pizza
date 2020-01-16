@@ -29,7 +29,7 @@ export class AppComponent {
     { nom: 'Chévre', image: 'chevre.jpg', poids: 20, prix: 2 },
     { nom: 'Mozza', image: 'mozza.jpg', poids: 50, prix: 4 }
 ];
-selectedIngredient: Ingredient;
+selectedIngredients: Ingredient[] = [];
 
 
 
@@ -51,9 +51,18 @@ selectedIngredient: Ingredient;
     console.log(pizza);
     this.selectedPizza = pizza;
   }
-  selectIngredient(event){
+  selectIngredient(event: Ingredient){
     console.log(event);
-    this.selectedIngredient = event;
+    // Si l'ingrédiant n'est pas encore dans la liste des ingrédients sélectionnés, on l'ajoute
+    if(!this.selectedIngredients.includes(event)){
+    this.selectedIngredients.push(event);
+    }
+  }
+
+  deleteIngredient(index: number, event){
+    event.stopPropagation();
+    //on supprime l'index du tableau
+    this.selectedIngredients.splice(index, 1);
   }
   
 }
