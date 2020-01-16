@@ -1,15 +1,17 @@
-<h1 class="text-center mb-5">{{ title }}</h1>
+<h1>{{ title }}</h1>
 <app-pizza [pizza]="selectedPizza"></app-pizza>
-<app-author-component [user]="user"></app-author-component>
 
-<!-- 
-  <input  [value]="selectedPizza.name" (keyup)="pizza.name = $event.target.value">
+<app-author [user]="user"></app-author>
+
+<app-ingredient [ingredients]="ingredients"></app-ingredient>
+
+
+<!--
+  <input [value]="selectedPizza.name" (keyup)="selectedPizza.name = $event.target.value">
 -->
-
-<h2 class="text-center mb-5 mt-5">Les pizzas</h2>
-
-<ul class="text-center">
-  <li *ngFor="let pizza of pizzas"(click)="onSelect(pizza)">
+<h2>Les pizzas</h2>
+<ul>
+  <li *ngFor="let pizza of pizzas" (click)="onSelect(pizza)">
     {{ pizza.name }}
   </li>
 </ul>

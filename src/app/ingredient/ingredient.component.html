@@ -1,0 +1,25 @@
+<table class="table">
+    <tr>
+        <th>Nom</th>
+        <th>Image</th>
+        <th>Poids</th>
+        <th>Prix</th>
+    </tr>
+    
+        <tr *ngFor="let ingredient of ingredients">
+            <td>{{ ingredient.nom }}</td>
+            <td><img  width ="100" src="'/assets/ingredients/' + ingredient.image" alt="ingredient.image"><br></td>
+            <td>{{ ingredient.poids }}</td>
+            <td>{{ ingredient.prix }}</td>
+        </tr>
+</table>
+
+<!--<ul>
+    <li *ngFor="let ingredient of ingredients">
+        <span>{{ ingredient.nom }}</span><br>
+        <img  width ="100" src="'/assets/ingredients/' + ingredient.image" alt="ingredient.image"><br>
+        <span>{{ ingredient.poids }}</span><br>
+        <span>{{ ingredient.prix }}</span>
+    </li>
+</ul>-->
+
