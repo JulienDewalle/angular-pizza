@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { PizzaComponent } from './pizza/pizza.component';
@@ -9,6 +10,9 @@ import { IngredientComponent } from './ingredient/ingredient.component';
 import { MenuComponent } from './menu/menu.component';
 import { TestPipe } from './test.pipe';
 import { TaxePipe } from './taxe.pipe';
+import { HomeComponent } from './home/home.component';
+import { PizzaListComponent } from './pizza-list/pizza-list.component';
+import { PizzaSingleComponent } from './pizza-single/pizza-single.component';
 
 @NgModule({
   declarations: [
@@ -18,11 +22,21 @@ import { TaxePipe } from './taxe.pipe';
     IngredientComponent,
     MenuComponent,
     TestPipe,
-    TaxePipe
+    TaxePipe,
+    HomeComponent,
+    PizzaListComponent,
+    PizzaSingleComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot([
+      //un Objet représente une route
+      { path: '', component: HomeComponent },
+      { path: 'pizzas', component: PizzaListComponent },
+      { path: 'pizzas/:id', component: PizzaSingleComponent }
+    ])
+
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -8,12 +8,12 @@
             </button>
             <div class="collapse navbar-collapse" [class.show]="isCollapsed">
             <div class="navbar-nav">
-                <a class="nav-item nav-link active" href="#">Home</a>
-                <a class="nav-item nav-link" href="#">Features</a>
-                <a class="nav-item nav-link" href="#">Pricing</a>
+                <a class="nav-item nav-link" routerLink="/" routerLinkActive='active' [routerLinkActiveOptions]="{exact: true}">Accueil</a>
+                <a class="nav-item nav-link" routerLink="/pizzas" routerLinkActive='active' [routerLinkActiveOptions]="{exact: false}">Nos pizzas</a>
+                <a class="nav-item nav-link" routerLink="#">Pricing</a>
             </div>
             <div class="navbar-nav ml-auto">
-                <a class="nav-item nav-link" href="#" (click)="switchTheme()">
+                <a class="nav-item nav-link" (click)="switchTheme()">
                     Switch to {{ ('light' === color) ? 'dark' : 'light' }}</a>
             </div>
             </div>

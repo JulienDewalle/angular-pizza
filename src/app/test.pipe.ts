@@ -9,6 +9,7 @@ export class TestPipe implements PipeTransform {
     console.log(args);
     let before = args[0] || ''; //on vérifie si la clé du tableau existe
     let after = args[1] || '';
+    
 
     return before + value + after;
   }
