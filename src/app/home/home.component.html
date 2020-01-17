@@ -7,8 +7,13 @@
 
 <h2>Les pizzas</h2>
 
+  <input type="range" value="2" 
+          step="1" 
+          min="1" 
+          [max]="pizzas.length"
+          #number [(ngModel)]="number.value">
   <div class="row">
-    <div *ngFor="let pizza of pizzas" 
+    <div *ngFor="let pizza of pizzas | slice:0:number.value" 
         (click)="onSelect(pizza)" 
         class="col-3"
     >
