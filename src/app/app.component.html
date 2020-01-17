@@ -10,6 +10,10 @@
 
 <app-ingredient [ingredients]="ingredients" (select)="selectIngredient($event)"></app-ingredient>
 
+<h2>Les pipes</h2>
+<p>{{ 'Hello' | test }}</p>
+<p>TVA 20% : {{ 10 | taxe }} €</p>
+<p>TVA 65% : {{ 10 | taxe:32 | number}} €</p>
 
 <!--
   <input [value]="selectedPizza.name" (keyup)="selectedPizza.name = $event.target.value">
